@@ -3,6 +3,7 @@
 import React from 'react'
 import { useState } from 'react';
 import {Checkbox} from "@nextui-org/react";
+import Link from 'next/link';
 import PrelineScript from '../components/PrelineScript'
 
 function login() {
@@ -15,7 +16,7 @@ function login() {
                 <div className="w-full max-w-lg mx-auto">
                     <div className="p-4 sm:p-5">
                         <div className="text-center">
-                            <img src='KuraKaniLogo.svg' />
+                            <Link href={'/'}><img src='KuraKaniLogo.svg' /></Link>
                             <h1 className="block text-2xl font-bold text-gray-900 dark:text-cream">Sign in</h1>
                             <p className="mt-2 text-sm text-gray-800 dark:text-gray-400">
                                 Don't have an account yet?

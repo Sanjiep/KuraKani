@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'newspirit';
+    src: local() 
+    url('/client/public/fonts/newspirit.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
