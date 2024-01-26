@@ -56,7 +56,7 @@ function login() {
                                     <div>
                                         <div className="flex justify-between items-center">
                                             <label htmlFor="password" className="block text-sm mb-2 dark:text-cream">Password</label>
-                                            <a className="text-sm text-hunyellow hover:text-yellow-600 decoration-2 hover:underline font-medium dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="../examples/div/recover-account.div">Forgot password?</a>
+                                            <Link className="text-sm text-hunyellow hover:text-yellow-600 decoration-2 hover:underline font-medium dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="/resetpassword">Forgot password?</Link>
                                         </div>
                                         <div className="relative flex items-center">
                                             <input id="password" placeholder='Password' name="password" type={isVisible ? 'text' : 'password'} className="py-3 px-4 block w-full border-default border-1 bg-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600" required aria-describedby="password-error" />
