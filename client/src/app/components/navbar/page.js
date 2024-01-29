@@ -2,7 +2,7 @@ import React from 'react'
 import PrelineScript from '../PrelineScript'
 import Link from 'next/link'
 
-const navbar = () => {
+const Navbar = () => {
   return (
     <div className='sticky top-0 z-50 '>
     <header className="flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-cream shadow-md text-sm dark:bg-gray-800">
@@ -40,4 +40,4 @@ const navbar = () => {
   )
 }
 
-export default navbar
+export default Navbar
