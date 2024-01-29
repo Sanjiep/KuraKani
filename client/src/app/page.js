@@ -1,10 +1,10 @@
 import React from 'react'
 import Nav from './components/navbar/page'
-
+import PageLayout from './components/PageLayout/page'
 function page() {
   return (
     <div>
-      <Nav />
+      <PageLayout>
       <div className="relative overflow-hidden before:absolute before:top-0 before:start-1/2 before:bg-[url('https://preline.co/assets/svg/examples/squared-bg-element.svg')] before:bg-no-repeat before:bg-top before:w-full before:h-full before:-z-[1] before:transform before:-translate-x-1/2 dark:before:bg-[url('https://preline.co/assets/svg/examples/squared-bg-element-dark.svg')]">
         <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-10">
           <div className="flex justify-center">
@@ -37,6 +37,7 @@ function page() {
           </div>
         </div>
       </div>
+      </PageLayout>
     </div>
   )
 }
