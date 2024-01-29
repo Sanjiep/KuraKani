@@ -1,5 +1,5 @@
 import React from 'react'
-import PrelineScript from '../../components/PrelineScript'
+import PrelineScript from '../../../components/PrelineScript'
 function FAQs() {
     return (
         <div>
