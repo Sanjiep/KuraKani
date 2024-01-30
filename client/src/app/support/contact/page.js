@@ -1,8 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
+import PageLayout from '../../../components/PageLayout/page'
 function Contact() {
     return (
         <div>
+            <PageLayout>
                 <div className="max-w-[85rem] px-4 py-5 sm:px-6 lg:px-8 lg:py-14 mx-auto">
                     <div className="max-w-xl mx-auto">
                         <div className="text-center">
@@ -104,6 +106,7 @@ function Contact() {
                         </a>
                     </div>
                 </div>
+            </PageLayout>
         </div>
     )
 }
