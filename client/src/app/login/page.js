@@ -4,7 +4,7 @@ import React from 'react'
 import { useState } from 'react';
 import {Checkbox} from "@nextui-org/react";
 import Link from 'next/link';
-import PrelineScript from '../components/PrelineScript'
+import PrelineScript from '../../components/PrelineScript'
 
 function login() {
 

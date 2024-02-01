@@ -5,10 +5,35 @@ import Link from 'next/link'
 import { useState } from 'react';
 import { Checkbox } from '@nextui-org/react';
 import PrelineScript from '../../components/PrelineScript';
+import {useRouter} from 'next/navigation';
+// import { Formik, useFormik } from 'formik';
+// import * as yup from 'yup'
 
 function signup() {
+  const router = useRouter()
+
+//   const SignupSchema = Yup.object().shape({
+//     // userName: Yup.string()
+//     //     .required('First name required'),
+
+//     password: Yup.string()
+//         .required('Password required')
+//         .min(8, 'Password must be at least 8 characters')
+//         .matches(
+//             /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]/,
+//             'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character'
+//         ),
+//     confirmPassword: Yup.string()
+//         .required('Confirm password required')
+//         .oneOf([Yup.ref('password'), null], "Passwords doesn't match!"),
+
+//     email: Yup.string().email('Invalid email').required('Email required'),
+// });
+
   const [isVisible, setIsVisible] = useState(false);
   const toggleVisibility = () => setIsVisible(!isVisible);
+
+
   return (
     <div>
         <div className="dark:bg-slate-900 flex h-screen items-center p-3">
