@@ -8,6 +8,7 @@ import PrelineScript from '../../components/PrelineScript';
 import { useRouter } from 'next/navigation';
 import { Formik, useFormik } from 'formik';
 import * as Yup from 'yup'
+import { toast } from 'react-toastify';
 
 function signup() {
   const router = useRouter()
@@ -32,8 +33,8 @@ function signup() {
 
 
   const registerUser = async (values) => {
-    // try {
-    const res = await fetch(`http://localhost:1000/register`, {
+    try {
+    const res = await fetch(`http://localhost:${process.env.NEXT_PUBLIC_API_URL}/register`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(values),
@@ -46,11 +47,11 @@ function signup() {
         }
 
         const data = await res.json();
-    //     // toast.success(data.msg);
-    //     router.push('/home')
-    // } catch (error) {
-    //     // toast.error(error.message || 'Something is wrong!!');
-    // }
+        toast.success(data.msg);
+        router.push('/home')
+    } catch (error) {
+         toast.error(error.message || 'Something is wrong!!');
+    }
   };
 
   const formik = useFormik({

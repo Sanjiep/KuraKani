@@ -1,6 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
+import 'react-toastify/dist/ReactToastify.css';
+import { Slide, ToastContainer } from 'react-toastify';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,6 +16,14 @@ export default function RootLayout({ children }) {
     <html lang="en" className="bg-cream">
       <body className={` ${inter.className}`}>
       <Providers>
+      <ToastContainer
+              position="top-right"
+              theme="light"
+              autoClose={4000}
+              hideProgressBar
+              closeOnClick
+              transition= {Slide}
+              />
           {children}
         </Providers>
         </body>
