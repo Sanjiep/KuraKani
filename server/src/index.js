@@ -3,13 +3,15 @@ const app = express()
 require('dotenv').config()
 const connection = require('./db/connection')
 const userRouter = require('./routes/user')
+const cors = require('cors')
+app.use(cors())
 
 const port = process.env.PORT
 
 app.use(express.json())
 app.use(userRouter)
-
 connection()
+
 
 app.post('/', (req, res) => {
   res.send('Hello World!')
