@@ -76,12 +76,12 @@ function signup() {
         <div className="w-full max-w-lg mx-auto p-6">
           <div className="mt-0 h-screen dark:bg-gray-800 dark:border-gray-700">
             <div className="p-4 sm:p-7">
-              <div className="text-center">
-                <Link href={'/'}><img className='h-40' src='KuraKaniLogo.svg' /></Link>
+              <div className="flex flex-col text-center items-center">
+                <Link href={'/'}><img className='w-72' src='KuraKaniLogo.svg' /></Link>
                 <h1 className="block text-2xl font-bold text-gray-800 dark:text-white">Sign up</h1>
                 <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
                   Already have an account?
-                  <Link className="text-hunyellow decoration-2 hover:underline font-medium dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="/login"> Sign in here
+                  <Link className="text-hunyellow decoration-2 hover:underline font-medium dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="/login"> Login
                   </Link>
                 </p>
               </div>
@@ -197,7 +197,7 @@ function signup() {
                     </div>
                   </div>
 
-                  <button type="submit" className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border-1 border-default text-defualt hover:bg-default hover:text-cream disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">Sign in</button>
+                  <button type="submit" className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border-1 border-default text-defualt hover:bg-default hover:text-cream disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">Create account</button>
                 </div>
 
               </div>
