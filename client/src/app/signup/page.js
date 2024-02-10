@@ -48,7 +48,7 @@ function signup() {
 
         const data = await res.json();
         toast.success(data.msg);
-        router.push('/home')
+        router.push('/username')
     } catch (error) {
          toast.error(error.message || 'Something is wrong!!');
     }
