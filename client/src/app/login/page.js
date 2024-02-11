@@ -6,13 +6,16 @@ import { Checkbox } from "@nextui-org/react"
 import { toast } from 'react-toastify';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import PrelineScript from '../../components/PrelineScript'
+import { addUserDetails } from '../../redux/reduceSlice/userSlice';
+import { useDispatch } from 'react-redux';
+import { useRouter } from 'next/navigation';
 
 function login() {
 
     const router = useRouter();
+    const dispatch = useDispatch();
 
     const logInSchema = Yup.object().shape({
         email: Yup.string().email('Invalid email').required('Required'),
@@ -31,9 +34,9 @@ function login() {
             const data = await res.json();
 
             if (res.status === 200) {
-                toast.success('Login successful');
+                // toast.success('Login successful');
                 // Redirect to the appropriate page upon successful login
-                // dispatch(addUserDetails(data))
+                dispatch(addUserDetails(data))
                 router.push('/home');
             } else {
                 toast.error(data.msg);
@@ -43,6 +46,7 @@ function login() {
             toast.error('An unexpected error occurred');
         }
     };
+    
 
     const formik = useFormik({
         initialValues: {

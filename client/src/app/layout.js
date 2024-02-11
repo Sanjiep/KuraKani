@@ -3,6 +3,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 import 'react-toastify/dist/ReactToastify.css';
 import { Slide, ToastContainer } from 'react-toastify';
+import ReduxProvider from "../redux/reduxProviders";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,18 +16,20 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="bg-cream">
       <body className={` ${inter.className}`}>
-      <Providers>
-      <ToastContainer
+        <ReduxProvider>
+          <Providers>
+            <ToastContainer
               position="top-right"
               theme="light"
               autoClose={4000}
               hideProgressBar
               closeOnClick
-              transition= {Slide}
-              />
-          {children}
-        </Providers>
-        </body>
+              transition={Slide}
+            />
+            {children}
+          </Providers>
+        </ReduxProvider>
+      </body>
     </html>
   );
 }
