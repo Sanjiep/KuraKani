@@ -23,7 +23,7 @@ const loginUser = async (req, res) => {
                 res.status(200).json({
                     msg: 'Login successful',
                     // token,
-                    // userDetails
+                    userDetails
                 });
             } else {
                 res.status(403).json({
